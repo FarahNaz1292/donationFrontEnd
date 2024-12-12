@@ -41,7 +41,7 @@ const DonationsPage = () => {
               >
                 <figure>
                   <img
-                    src={donation.Thumbnail}
+                    src={donation.thumbnail}
                     alt=""
                     className="w-full h-[20vh]"
                   />

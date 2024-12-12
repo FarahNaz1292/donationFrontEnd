@@ -1,12 +1,17 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
 import logo from "../../assets/logo.png";
+import Cookies from "js-cookie";
 import userAuth from "../../utils/AuthProvider/AuthProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
-  const { user } = userAuth();
+  const { user, setUser } = userAuth();
+  const handleLogOut = () => {
+    Cookies.remove("accessToken");
+    setUser(null);
+  };
   console.log("this is the user", user);
 
   return (
@@ -128,16 +133,31 @@ const Navbar = () => {
           <details className="dropdown">
             <div className="avatar">
               <div className="w-24 rounded-full">
-                <img src={user.profilePicture} />
+                <img src={user.profilePicture} alt={user.userName} />
               </div>
             </div>
-            <summary className="btn m-1">open or close</summary>
+            {/* <summary className="btn m-1">open or close</summary> */}
             <ul className="menu dropdown-content bg-base-100 rounded-box z-[2] w-52 p-2 shadow">
               <li>
-                <a>Item 1</a>
+                <p>{user.userName}</p>
               </li>
               <li>
                 <a>Item 2</a>
+              </li>
+              <li>
+                {user && user.role === "admin" ? (
+                  <Link to="/admin/admin-home"> DashBoard </Link>
+                ) : (
+                  <Link to="">User Profile</Link>
+                )}
+              </li>
+              <li>
+                <button
+                  className="btn btn-warning btn-sm"
+                  onClick={handleLogOut}
+                >
+                  Logout
+                </button>
               </li>
             </ul>
           </details>

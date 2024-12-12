@@ -54,7 +54,7 @@ const RaiseFundSection = () => {
                   <p> Start Date: {fund.startDate}</p>
                   <p>End Date: {fund.endDate}</p>
                   <div className="card-actions justify-center">
-                    <NavLink to={`/fundraisings/${fund.id}`}>
+                    <NavLink to={`/fundraisings/${fund._id}`}>
                       {" "}
                       <button className="btn bg-[#2e3549] w-20 rounded-md h-10 font-semibold text-white">
                         Donate

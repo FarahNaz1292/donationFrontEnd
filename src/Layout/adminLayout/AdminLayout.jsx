@@ -35,6 +35,26 @@ const AdminLayout = () => {
           <li>
             <NavLink to="/admin/all-donation">All Donation</NavLink>
           </li>
+          <li>
+            <NavLink to="/admin/create-fundraiser">Create Fundraiser</NavLink>
+          </li>
+          <li>
+            <NavLink to="/admin/all-fundraiser">All Fundraiser</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/admin/all-user">All User</NavLink>
+          </li>
+          <li>
+            <NavLink to="/admin/all-transaction">
+              All Donation Transaction
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/admin/all-transaction">
+              All Fundraiser Transaction
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>

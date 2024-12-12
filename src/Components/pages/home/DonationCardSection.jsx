@@ -40,7 +40,7 @@ const DonationCardSection = () => {
               >
                 <figure>
                   <img
-                    src={donation.Thumbnail}
+                    src={donation.thumbnail}
                     alt=""
                     className="w-full h-[20vh]"
                   />
@@ -53,7 +53,7 @@ const DonationCardSection = () => {
                     {donation.description}
                   </p>
                   <div className="card-actions justify-center">
-                    <NavLink to={`/donations/${donation.id}`}>
+                    <NavLink to={`/donations/${donation._id}`}>
                       <button className="btn bg-[#2e3549] w-20 rounded-md h-10 font-semibold text-white">
                         Donate
                       </button>

@@ -3,9 +3,10 @@ import Lottie from "lottie-react";
 
 import { Link, useNavigate } from "react-router";
 import Login from "../../../../public/login.json";
+import toast from "react-hot-toast";
 
 const SignIn = () => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -21,10 +22,9 @@ const SignIn = () => {
       })
       .then((res) => {
         console.log(res);
+        toast.success("You have logged in successfully");
+        navigate("/");
       });
-    navigate("/").catch((error) => {
-      console.log(error);
-    });
   };
 
   return (

@@ -27,7 +27,7 @@ const userAuth = () => {
     getUserFromToken();
   }, []);
 
-  return { user };
+  return { user, setUser };
 };
 
 export default userAuth;

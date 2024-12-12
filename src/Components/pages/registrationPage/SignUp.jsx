@@ -10,12 +10,12 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const username = form.user.value;
+    const userName = form.user.value;
     const email = form.email.value;
     const password = form.password.value;
     const profilePicture = form.profilePicture.value;
     const newUser = {
-      username,
+      userName,
       email,
       password,
       profilePicture,
@@ -72,18 +72,7 @@ const SignUp = () => {
                   required
                 />
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Role</span>
-                </label>
-                <input
-                  type="text"
-                  name="role"
-                  placeholder="Role"
-                  className="input input-bordered"
-                  required
-                />
-              </div>
+
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Profile Photo</span>

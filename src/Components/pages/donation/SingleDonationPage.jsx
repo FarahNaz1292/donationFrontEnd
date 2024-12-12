@@ -6,17 +6,14 @@ const SingleDonationPage = () => {
   const { id } = useParams();
   const [donations, setDonations] = useState(null);
   useEffect(() => {
-    const getDonations = async () => {
+    const fetchDonation = async () => {
       const response = await axios.get(
         `http://localhost:5000/api/donations/${id}`
       );
-
       setDonations(response.data.data);
     };
-
-    getDonations();
+    fetchDonation();
   }, [id]);
-  console.log(id);
   console.log(donations);
 
   return (
@@ -25,7 +22,7 @@ const SingleDonationPage = () => {
         {donations ? (
           <div className="card card-compact bg-base-100  shadow-xl">
             <figure>
-              <img src={donations.Thumbnail} alt="" />
+              <img src={donations.thumbnail} alt="" />
             </figure>
             <div className="card-body">
               <h2 className="card-title">{donations.title}</h2>
