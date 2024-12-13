@@ -56,13 +56,15 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="flex">
-            {" "}
-            <img src={logo} alt="" className="w-20 ml-4" />
-            <a className="btn btn-ghost text-2xl font-bold text-[#2e3549] mt-5">
-              GiveHub
-            </a>
-          </div>
+          <Link to="/">
+            <div className="flex">
+              {" "}
+              <img src={logo} alt="" className="w-28 ml-4" />
+              <a className="btn btn-ghost text-3xl font-bold text-[#2e3549] mt-8">
+                GiveHub
+              </a>
+            </div>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className=" flex items-center  justify-center space-x-4 px-1">
@@ -140,9 +142,6 @@ const Navbar = () => {
             <ul className="menu dropdown-content bg-base-100 rounded-box z-[2] w-52 p-2 shadow">
               <li>
                 <p>{user.userName}</p>
-              </li>
-              <li>
-                <a>Item 2</a>
               </li>
               <li>
                 {user && user.role === "admin" ? (

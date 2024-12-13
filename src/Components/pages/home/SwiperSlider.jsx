@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Link } from "react-router";
 const SwiperSlider = () => {
   return (
     <>
@@ -42,9 +43,11 @@ const SwiperSlider = () => {
             </p>
             <p className="font-bold text-center text-2xl ">Feed the hungry</p>
             <div className="flex items-center justify-center">
-              <button className="btn btn-active btn-ghost">
-                Start Donating
-              </button>
+              <Link to="/signin">
+                <button className="btn btn-active btn-ghost">
+                  Start Donating
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -65,9 +68,11 @@ const SwiperSlider = () => {
               Help us Stop Child Labour
             </p>
             <div className="flex items-center justify-center">
-              <button className="btn btn-active btn-ghost">
-                Start Donating
-              </button>
+              <Link to="/signin">
+                <button className="btn btn-active btn-ghost">
+                  Start Donating
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -89,9 +94,11 @@ const SwiperSlider = () => {
               Help us plan more trees
             </p>
             <div className="flex items-center justify-center">
-              <button className="btn btn-active btn-ghost">
-                Start Donating
-              </button>
+              <Link to="/signin">
+                <button className="btn btn-active btn-ghost">
+                  Start Donating
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -112,9 +119,11 @@ const SwiperSlider = () => {
               Help us finance farmers
             </p>
             <div className="flex items-center justify-center">
-              <button className="btn btn-active btn-ghost">
-                Start Donating
-              </button>
+              <Link to="/signin">
+                <button className="btn btn-active btn-ghost">
+                  Start Donating
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -135,9 +144,11 @@ const SwiperSlider = () => {
               Help us provide clean water
             </p>
             <div className="flex items-center justify-center">
-              <button className="btn btn-active btn-ghost">
-                Start Donating
-              </button>
+              <Link to="/signin">
+                <button className="btn btn-active btn-ghost">
+                  Start Donating
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -158,9 +169,11 @@ const SwiperSlider = () => {
               Help us provide mobile medical
             </p>
             <div className="flex items-center justify-center">
-              <button className="btn btn-active btn-ghost">
-                Start Donating
-              </button>
+              <Link to="/signin">
+                <button className="btn btn-active btn-ghost">
+                  Start Donating
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -181,9 +194,11 @@ const SwiperSlider = () => {
               Help us make education afforadable
             </p>
             <div className="flex items-center justify-center">
-              <button className="btn btn-active btn-ghost">
-                Start Donating
-              </button>
+              <Link to="/signin">
+                <button className="btn btn-active btn-ghost">
+                  Start Donating
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -204,9 +219,11 @@ const SwiperSlider = () => {
               help us stop animal abuse
             </p>
             <div className="flex items-center justify-center">
-              <button className="btn btn-active btn-ghost">
-                Start Donating
-              </button>
+              <Link to="/signin">
+                <button className="btn btn-active btn-ghost">
+                  Start Donating
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>

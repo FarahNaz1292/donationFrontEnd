@@ -54,8 +54,8 @@ const DonationCardSection = () => {
                   </p>
                   <div className="card-actions justify-center">
                     <NavLink to={`/donations/${donation._id}`}>
-                      <button className="btn bg-[#2e3549] w-20 rounded-md h-10 font-semibold text-white">
-                        Donate
+                      <button className="btn bg-[#2e3549] w-60 rounded-md h-10 font-semibold text-white">
+                        Show details
                       </button>
                     </NavLink>
                   </div>
