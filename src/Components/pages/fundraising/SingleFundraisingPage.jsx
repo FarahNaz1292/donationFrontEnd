@@ -10,7 +10,7 @@ const SingleFundraisingPage = () => {
   const [fundraising, setfundraising] = useState(null);
   const { id } = useParams();
   const [showModal, setShowModal] = useState(false);
-  const [fundraiserId, setFundraiserId] = useState("");
+  const [fundraiserID, setFundraiserId] = useState("");
 
   useEffect(() => {
     const fetchFundraising = async () => {
@@ -24,15 +24,17 @@ const SingleFundraisingPage = () => {
   console.log(fundraising);
   const handleShowModal = (fundraising) => {
     setShowModal(true);
-    setFundraiserId(fundraising.id);
+    setFundraiserId(fundraising._id);
   };
   const handleFundraisingTransaction = async (e) => {
     e.preventDefault();
     const form = e.target;
     const message = form.message.value;
+    const amount = Number(form.amount.value);
     const newFund = {
-      donorID: user._id,
-      fundraiserId,
+      donorID: user.id,
+      fundraiserID: fundraising._id,
+      amount,
       message,
     };
     console.log(newFund);
@@ -134,6 +136,13 @@ const SingleFundraisingPage = () => {
                             placeholder="Enter Message"
                             className="input input-bordered"
                             name="message"
+                            required
+                          />
+                          <input
+                            type="number"
+                            placeholder="Enter Amount"
+                            className="input input-bordered mt-4"
+                            name="amount"
                             required
                           />
                         </div>

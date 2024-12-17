@@ -52,7 +52,7 @@ const AllUser = () => {
                   </div>
                 </div>
               </td>
-              <td>{user.UserName}</td>
+              <td>{user.userName}</td>
               <td>{user.email}</td>
               <td>{user.role}</td>
               <th>

@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Link, Route, Routes } from "react-router";
 import MainLayout from "./Layout/mainLayout/MainLayout.jsx";
 import Home from "./Components/pages/home/Home.jsx";
 import FundRaising from "./Components/pages/fundraising/FundRaising.jsx";
@@ -22,6 +22,10 @@ import CreateFundraising from "./Components/pages/Admin/CreateFundraising.jsx";
 import AllFundraising from "./Components/pages/Admin/AllFundraising.jsx";
 import AllUser from "./Components/pages/Admin/AllUser.jsx";
 import UpdatingFund from "./Components/pages/UpdatingCauses/UpdatingFund.jsx";
+import ErrorPage from "./Components/pages/ErrorHandling/ErrorPage.jsx";
+import AllTransactions from "./Components/pages/Admin/AllTransactions.jsx";
+
+import UserTransactions from "./Components/pages/userTransaction/UserTransactions.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -30,7 +34,7 @@ createRoot(document.getElementById("root")).render(
         <Toaster />
       </div>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
+        <Route path="/" element={<MainLayout />} errorElement={ErrorPage}>
           <Route path="/" element={<Home />} />
           <Route path="/donations" element={<DonationsPage />} />
           <Route path="/donations/:id" element={<SingleDonationPage />}></Route>
@@ -59,7 +63,12 @@ createRoot(document.getElementById("root")).render(
             path="/admin/update-donation/:id"
             element={<UpdatingDonations />}
           />
+          <Route path="/admin/all-donations" element={<AllTransactions />} />
         </Route>
+        <Route
+          path="/user/user-transactions"
+          element={<UserTransactions />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>

@@ -6,13 +6,10 @@ import welcomeAdmin from "../../../../public/welcomeAdmin.json";
 const AdminHome = () => {
   return (
     <div>
-      <h1 className="text-5xl  font-bold text-center mt-5">
-        Welcome to Dashboard
-      </h1>
-      <div classname="mb-10 flex justify-center ">
+      <div classname="mb-10 flex justify-center items-center">
         <TypeAnimation
           sequence={[
-            "Welcome to DashBoard",
+            "Welcome to Admin DashBoard",
             1500,
             "Here you can add donation",
             1000,

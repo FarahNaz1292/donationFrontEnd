@@ -9,7 +9,7 @@ const SingleDonationPage = () => {
   const { id } = useParams();
   const [donations, setDonations] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [donationId, setDonationId] = useState("");
+  const [donationID, setDonationId] = useState("");
   useEffect(() => {
     const fetchDonation = async () => {
       const response = await axios.get(
@@ -29,8 +29,8 @@ const SingleDonationPage = () => {
     const form = e.target;
     const message = form.message.value;
     const newDonation = {
-      donorID: user._id,
-      donationId,
+      donorID: user.id,
+      donationID: donations._id,
       message,
     };
     console.log(newDonation);

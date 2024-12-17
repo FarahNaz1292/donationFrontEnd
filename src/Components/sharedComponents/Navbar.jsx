@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router";
 import logo from "../../assets/logo.png";
 import Cookies from "js-cookie";
@@ -8,6 +8,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const { user, setUser } = userAuth();
+  const [dropdownOpen, setDropdownOpen] = useState();
   const handleLogOut = () => {
     Cookies.remove("accessToken");
     setUser(null);
@@ -132,34 +133,58 @@ const Navbar = () => {
           </ul>
         </div>
         {user ? (
-          <details className="dropdown">
-            <div className="avatar">
-              <div className="w-24 rounded-full">
-                <img src={user.profilePicture} alt={user.userName} />
-              </div>
+          <div className="navbar-end">
+            <div className=" dropdown dropdown-end">
+              <button>
+                {" "}
+                <div className="avatar">
+                  <div className="w-16 rounded-full mr-7">
+                    <img src={user.profilePicture} alt={user.userName} />
+                  </div>
+                </div>
+              </button>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-base-100 rounded-box z-[2] w-52 p-2 shadow"
+              >
+                <li>
+                  {user && user.role === "admin" ? (
+                    <ul>
+                      <li>
+                        <p>{user.userName}</p>
+                      </li>
+                      <li>
+                        <Link to="/admin/admin-home"> Dash Board </Link>
+                      </li>
+                      <li>
+                        <Link to="/admin/admin-profile">Admin Profile</Link>
+                      </li>
+                    </ul>
+                  ) : (
+                    <ul>
+                      <li>{user.userName}</li>
+                      <li>
+                        <Link to="">User Profile</Link>
+                      </li>
+                      <li>
+                        <Link to="/user/user-transactions">
+                          User Transaction
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+                <li>
+                  <button
+                    className="btn btn-warning btn-sm"
+                    onClick={handleLogOut}
+                  >
+                    Logout
+                  </button>
+                </li>
+              </ul>
             </div>
-            {/* <summary className="btn m-1">open or close</summary> */}
-            <ul className="menu dropdown-content bg-base-100 rounded-box z-[2] w-52 p-2 shadow">
-              <li>
-                <p>{user.userName}</p>
-              </li>
-              <li>
-                {user && user.role === "admin" ? (
-                  <Link to="/admin/admin-home"> DashBoard </Link>
-                ) : (
-                  <Link to="">User Profile</Link>
-                )}
-              </li>
-              <li>
-                <button
-                  className="btn btn-warning btn-sm"
-                  onClick={handleLogOut}
-                >
-                  Logout
-                </button>
-              </li>
-            </ul>
-          </details>
+          </div>
         ) : (
           <div className="navbar-end">
             <Link to="/signin">
