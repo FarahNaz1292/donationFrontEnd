@@ -30,10 +30,10 @@ const AllTransactions = () => {
     );
   }
   return (
-    <div className="overflow-x-auto w-full h-full pt-10">
+    <div className="overflow-x-auto w-full h-full pt-10 bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ... ">
       <h1 className="text-4xl text-center font-bold mb-10">
         {" "}
-        All Transactions
+        All Transactions By Users
       </h1>
       <table className="table">
         {/* head */}

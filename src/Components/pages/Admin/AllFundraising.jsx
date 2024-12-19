@@ -35,7 +35,10 @@ const AllFundraising = () => {
     }
   };
   return (
-    <div className="overflow-x-auto w-full">
+    <div className="overflow-x-auto w-full bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ... h-full p-4">
+      <h1 className="text-center text-2xl font-semibold p-10">
+        All Fundraiser
+      </h1>
       <table className="table w-full">
         {/* head */}
         <thead>

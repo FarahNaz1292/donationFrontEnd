@@ -28,9 +28,9 @@ const AllUser = () => {
     }
   };
   return (
-    <div className="overflow-x-auto w-full">
+    <div className="overflow-x-auto w-full h-full bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ... p-4">
+      <h1 className="text-center text-2xl font-semibold p-10">All Users</h1>
       <table className="table w-full ml-4">
-        {/* head */}
         <thead>
           <tr>
             <th>Photo</th>
@@ -57,7 +57,7 @@ const AllUser = () => {
               <td>{user.role}</td>
               <th>
                 <button
-                  className="btn btn-warning btn-xs"
+                  className="btn bg-[#1c0a35] text-[#e9d8a6]  btn-sm"
                   onClick={() => handleChange(user._id, user.role)}
                 >
                   Change Role

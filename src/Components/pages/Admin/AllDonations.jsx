@@ -48,7 +48,10 @@ const AllDonations = () => {
   };
   return (
     <>
-      <div className="overflow-x-auto w-full bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ...">
+      <div className="overflow-x-auto  bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ... w-full h-full pt-5">
+        <h1 className="text-center text-2xl font-semibold p-10">
+          All Donations
+        </h1>
         <table className="table w-full">
           {/* head */}
           <thead>
@@ -96,7 +99,6 @@ const AllDonations = () => {
           </tbody>
         </table>
       </div>
-      <Footer />
     </>
   );
 };

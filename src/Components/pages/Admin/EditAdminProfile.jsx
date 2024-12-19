@@ -125,7 +125,10 @@ const EditAdminProfile = () => {
               </div>
 
               <div className="form-control mt-6">
-                <button className="btn btn-warning" type="submit">
+                <button
+                  className="btn bg-[#1c0a35] text-[#e9d8a6]"
+                  type="submit"
+                >
                   Save Changes{" "}
                 </button>
               </div>
