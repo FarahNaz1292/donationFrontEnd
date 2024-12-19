@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate, useParams } from "react-router";
+import Navbar from "../../sharedComponents/Navbar";
+import Footer from "../../sharedComponents/Footer";
+import axios from "axios";
 
 const EditAdminProfile = () => {
   const navigate = useNavigate();
@@ -57,75 +61,76 @@ const EditAdminProfile = () => {
   };
   return (
     <>
-      <Navbar />
-      <h1 className="text-center m-8 text-4xl font-semibold">
-        Edit User Profile
-      </h1>
-      <div className="flex items-center justify-center">
-        <div className="card  bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <form className="card-body" onSubmit={handleEditUser}>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">UserName</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Input your name"
-                className="input input-bordered"
-                name="userName"
-                required
-                defaultValue={userName}
-              />
-            </div>
+      <div className="bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ... w-full h-full">
+        <h1 className="text-center m-8 text-4xl font-semibold">
+          Edit User Profile
+        </h1>
+        <div className="flex items-center justify-center">
+          <div className="card  bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form className="card-body" onSubmit={handleEditUser}>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">UserName</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Input your name"
+                  className="input input-bordered"
+                  name="userName"
+                  required
+                  defaultValue={userName}
+                />
+              </div>
 
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="input your email"
-                className="input input-bordered"
-                required
-                name="email"
-                defaultValue={email}
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Role</span>
-              </label>
-              <input
-                type="text"
-                placeholder={editProfile.role}
-                className="input input-bordered"
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Profile Picture</span>
-              </label>
-              <input
-                onClick={() => loadFile.current.click()}
-                required
-                name="profilePicture"
-                type="file"
-                ref={loadFile}
-                onChange={({ target: { files } }) => {
-                  files[0] && setFileName(files[0].name);
-                  if (files) {
-                    setImage(URL.createObjectURL(files[0]));
-                  }
-                }}
-              />
-            </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">email</span>
+                </label>
+                <input
+                  type="email"
+                  placeholder="input your email"
+                  className="input input-bordered"
+                  required
+                  name="email"
+                  defaultValue={email}
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Role</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder={editProfile.role}
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Profile Picture</span>
+                </label>
+                <input
+                  onClick={() => loadFile.current.click()}
+                  required
+                  name="profilePicture"
+                  type="file"
+                  ref={loadFile}
+                  onChange={({ target: { files } }) => {
+                    files[0] && setFileName(files[0].name);
+                    if (files) {
+                      setImage(URL.createObjectURL(files[0]));
+                    }
+                  }}
+                />
+              </div>
 
-            <div className="form-control mt-6">
-              <button className="btn btn-warning" type="submit">
-                Save Changes{" "}
-              </button>
-            </div>
-          </form>
+              <div className="form-control mt-6">
+                <button className="btn btn-warning" type="submit">
+                  Save Changes{" "}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </>

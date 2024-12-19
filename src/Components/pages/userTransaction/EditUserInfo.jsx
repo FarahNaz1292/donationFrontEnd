@@ -65,9 +65,9 @@ const EditUserInfo = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... ">
+      <div className="bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ...">
         <h1 className="text-center p-10 text-4xl font-semibold">
-          Edit User Profile
+          Edit Your Profile
         </h1>
         <div className="flex items-center justify-center">
           <div className=" w-[50%]">

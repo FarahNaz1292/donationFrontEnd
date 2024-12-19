@@ -1,11 +1,16 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const FundRaising = () => {
   const [fundRaisings, setFundRaisings] = useState([]);
 
   useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      easing: "linear",
+    });
     const getFundraisings = async () => {
       const response = await axios.get("http://localhost:5000/api/funds");
       setFundRaisings(response.data.data);
@@ -33,7 +38,10 @@ const FundRaising = () => {
             that transforms lives.
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10 mb-10">
+        <div
+          className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10 mb-10"
+          data-aos="fade-down"
+        >
           {fundRaisings.map((fund) => {
             return (
               <div

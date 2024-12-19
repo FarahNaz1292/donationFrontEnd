@@ -9,6 +9,7 @@ const DonationCardSection = () => {
   useEffect(() => {
     AOS.init({
       duration: 2500,
+      easing: "ease-in-back",
     });
     const getDonations = async () => {
       const response = await axios.get("http://localhost:5000/api/donations");
@@ -37,7 +38,7 @@ const DonationCardSection = () => {
       <div>
         <div
           className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10"
-          data-aos="fade-zoom-left"
+          data-aos="zoom-in-down"
           data-aos-once="true"
         >
           {donations.slice(0, displayCards).map((donation) => {

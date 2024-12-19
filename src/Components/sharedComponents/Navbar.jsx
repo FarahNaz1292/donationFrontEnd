@@ -163,22 +163,24 @@ const Navbar = () => {
                   {user && user.role === "admin" ? (
                     <ul>
                       <li>
-                        <p>{user.userName}</p>
+                        <p className="text-xl font-semibold">{user.userName}</p>
                       </li>
-                      <li>
+                      <li className="font-semibold">
                         <Link to="/admin/admin-home"> Dash Board </Link>
                       </li>
-                      <li>
+                      <li className="font-semibold">
                         <Link to="/admin/profile">Admin Profile</Link>
                       </li>
                     </ul>
                   ) : (
-                    <ul>
-                      <li>{user.userName}</li>
+                    <ul className="flex flex-col items-center justify-center">
                       <li>
+                        <p className="text-xl font-semibold">{user.userName}</p>
+                      </li>
+                      <li className="font-semibold">
                         <Link to="/user/profile">User Profile</Link>
                       </li>
-                      <li>
+                      <li className="font-semibold ">
                         <Link to="/user/user-transactions">
                           User Transaction
                         </Link>
@@ -188,7 +190,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <button
-                    className="btn btn-warning btn-sm"
+                    className="btn bg-[#1c0a35] text-[#e9d8a6] btn-sm"
                     onClick={handleLogOut}
                   >
                     Logout

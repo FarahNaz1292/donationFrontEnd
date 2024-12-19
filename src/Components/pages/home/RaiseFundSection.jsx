@@ -34,7 +34,7 @@ const RaiseFundSection = () => {
         </div>
         <div
           className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10"
-          data-aos="fade-zoom-right"
+          data-aos="zoom-out-up"
         >
           {fundRaisings.slice(0, cards).map((fund) => {
             return (

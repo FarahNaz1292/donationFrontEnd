@@ -5,8 +5,8 @@ import welcomeAdmin from "../../../../public/welcomeAdmin.json";
 
 const AdminHome = () => {
   return (
-    <div>
-      <div classname="mb-10 flex justify-center items-center">
+    <div className="bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ... w-full h-full">
+      <div className="mb-10 flex justify-center items-center  ">
         <TypeAnimation
           sequence={[
             "Welcome to Admin DashBoard",
@@ -35,8 +35,6 @@ const AdminHome = () => {
         width={500}
         height={250}
       ></Lottie>
-
-      <div></div>
     </div>
   );
 };

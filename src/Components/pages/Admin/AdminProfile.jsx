@@ -39,9 +39,8 @@ const AdminProfile = () => {
 
   return (
     <>
-      <Navbar />
       {adminProfile ? (
-        <div className="flex flex-col justify-center items-center m-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ...">
+        <div className="flex flex-col w-full h-full justify-center items-center bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ...">
           <h1 className="text-3xl font-extrabold m-8">Your Profile</h1>
           <div>
             <img
@@ -53,7 +52,7 @@ const AdminProfile = () => {
           <div className="hero">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div className="card w-full shadow-2xl ">
-                <form className="card-body ml-20 mr-20 ">
+                <form className="card-body ml-20 mr-20 mt-6">
                   <div className="form-control flex flex-row gap-20">
                     <label className="label">
                       <span className="label-text text-2xl font-bold">
@@ -109,8 +108,6 @@ const AdminProfile = () => {
           </div>
         </p>
       )}
-
-      <Footer />
     </>
   );
 };

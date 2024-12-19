@@ -15,13 +15,14 @@ const AdvertiseSection = () => {
   useEffect(() => {
     AOS.init({
       duration: 2000,
+      easing: "ease-in-out-cubic",
     });
   });
   return (
     <>
       <div
         className="flex gap-7 justify-center items-center p-7 m-8 relative"
-        data-aos="fade-zoom-in"
+        data-aos="flip-up"
         data-aos-once="false"
       >
         <div>

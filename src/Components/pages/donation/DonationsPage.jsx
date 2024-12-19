@@ -1,10 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const DonationsPage = () => {
   const [donations, setDonations] = useState([]);
   useEffect(() => {
+    AOS.init({
+      duration: 2500,
+    });
     const getDonations = async () => {
       const response = await axios.get("http://localhost:5000/api/donations");
       setDonations(response.data.data);
@@ -32,7 +37,10 @@ const DonationsPage = () => {
         </p>
       </div>
       <div>
-        <div className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10 mb-10">
+        <div
+          className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10 mb-10"
+          data-aos="fade-up"
+        >
           {donations.map((donation) => {
             return (
               <div

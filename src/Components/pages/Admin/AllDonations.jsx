@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link } from "react-router";
+import Footer from "../../sharedComponents/Footer";
+import Navbar from "../../sharedComponents/Navbar";
 
 const AllDonations = () => {
   const [donations, setDonations] = useState([]);
@@ -45,52 +47,57 @@ const AllDonations = () => {
     }
   };
   return (
-    <div className="overflow-x-auto w-full">
-      <table className="table w-full">
-        {/* head */}
-        <thead>
-          <tr>
-            <th>Thumbnail</th>
-            <th>Title</th>
-            <th>Amount</th>
-            <th>Category</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {donations.map((donation) => (
+    <>
+      <div className="overflow-x-auto w-full bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ...">
+        <table className="table w-full">
+          {/* head */}
+          <thead>
             <tr>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle h-12 w-12">
-                      <img
-                        src={donation.thumbnail}
-                        alt="Avatar Tailwind CSS Component"
-                      />
+              <th>Thumbnail</th>
+              <th>Title</th>
+              <th>Amount</th>
+              <th>Category</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {donations.map((donation) => (
+              <tr>
+                <td>
+                  <div className="flex items-center gap-3">
+                    <div className="avatar">
+                      <div className="mask mask-squircle h-12 w-12">
+                        <img
+                          src={donation.thumbnail}
+                          alt="Avatar Tailwind CSS Component"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-              <td>{donation.title}</td>
-              <td>{donation.amount}</td>
-              <td>{donation.category}</td>
-              <td>
-                <Link to={`/admin/update-donation/${donation._id}`}>
-                  <button className="btn btn-warning btn-xs mr-4">Edit</button>
-                </Link>
-                <button
-                  className="btn btn-error btn-xs"
-                  onClick={() => handleDelete(donation._id)}
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+                </td>
+                <td>{donation.title}</td>
+                <td>{donation.amount}</td>
+                <td>{donation.category}</td>
+                <td>
+                  <Link to={`/admin/update-donation/${donation._id}`}>
+                    <button className="btn btn-warning btn-xs mr-4">
+                      Edit
+                    </button>
+                  </Link>
+                  <button
+                    className="btn btn-error btn-xs"
+                    onClick={() => handleDelete(donation._id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <Footer />
+    </>
   );
 };
 
