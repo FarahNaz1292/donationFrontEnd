@@ -60,7 +60,7 @@ const FundRaising = () => {
                   <div className="card-actions justify-center">
                     <Link to={`/fundraisings/${fund._id}`}>
                       {" "}
-                      <button className="btn bg-[#2e3549] w-20 rounded-md h-10 font-semibold text-white">
+                      <button className="btn bg-[#1c0a35] text-[#e9d8a6] w-[250px] rounded-md h-10 font-semibold">
                         Donate
                       </button>
                     </Link>

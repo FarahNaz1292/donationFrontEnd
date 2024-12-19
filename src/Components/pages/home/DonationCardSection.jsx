@@ -1,11 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const DonationCardSection = () => {
   const [donations, setDonations] = useState([]);
   const [displayCards, setDisplayCards] = useState(4);
   useEffect(() => {
+    AOS.init({
+      duration: 2500,
+    });
     const getDonations = async () => {
       const response = await axios.get("http://localhost:5000/api/donations");
       setDonations(response.data.data);
@@ -31,7 +35,11 @@ const DonationCardSection = () => {
         </p>
       </div>
       <div>
-        <div className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10">
+        <div
+          className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10"
+          data-aos="fade-zoom-left"
+          data-aos-once="true"
+        >
           {donations.slice(0, displayCards).map((donation) => {
             return (
               <div
@@ -54,7 +62,7 @@ const DonationCardSection = () => {
                   </p>
                   <div className="card-actions justify-center">
                     <NavLink to={`/donations/${donation._id}`}>
-                      <button className="btn bg-[#2e3549] w-60 rounded-md h-10 font-semibold text-white">
+                      <button className="btn bg-[#1c0a35] text-[#e9d8a6] w-60 rounded-md h-10 font-semibold">
                         Show details
                       </button>
                     </NavLink>
@@ -66,7 +74,7 @@ const DonationCardSection = () => {
         </div>
         <div className="flex items-center justify-center m-10">
           <NavLink to="/donations">
-            <button className="btn bg-[#2e3549] w-25 rounded-md h-10 font-semibold text-white text-center">
+            <button className="btn bg-[#1c0a35] text-[#e9d8a6] w-40 rounded-md h-10 font-semibold text-center">
               Show All
             </button>
           </NavLink>

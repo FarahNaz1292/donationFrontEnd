@@ -88,7 +88,7 @@ const SingleDonationPage = () => {
                 </p>
 
                 <button
-                  className="btn bg-[#2e3549] text-white mt-5"
+                  className="btn bg-[#1c0a35] text-[#e9d8a6] w-full mt-5"
                   onClick={handleShowModal}
                 >
                   Donate

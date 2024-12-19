@@ -1,11 +1,16 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const RaiseFundSection = () => {
   const [fundRaisings, setFundRaisings] = useState([]);
   const [cards, setCards] = useState(4);
   useEffect(() => {
+    AOS.init({
+      duration: 2500,
+    });
     const getFundraisings = async () => {
       const response = await axios.get("http://localhost:5000/api/funds");
       setFundRaisings(response.data.data);
@@ -27,7 +32,10 @@ const RaiseFundSection = () => {
             help us make this world a better place to live for all
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10">
+        <div
+          className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10"
+          data-aos="fade-zoom-right"
+        >
           {fundRaisings.slice(0, cards).map((fund) => {
             return (
               <div
@@ -55,7 +63,7 @@ const RaiseFundSection = () => {
                   <div className="card-actions justify-center">
                     <NavLink to={`/fundraisings/${fund._id}`}>
                       {" "}
-                      <button className="btn bg-[#2e3549] w-40 rounded-md h-10 font-semibold text-white">
+                      <button className="btn bg-[#1c0a35] text-[#e9d8a6] w-40 rounded-md h-10 font-semibold ">
                         show Details
                       </button>
                     </NavLink>
@@ -68,7 +76,7 @@ const RaiseFundSection = () => {
         <div className="flex items-center justify-center m-10">
           <NavLink to="/fundraisings">
             {" "}
-            <button className="btn bg-[#2e3549] w-25 rounded-md h-10 font-semibold text-white">
+            <button className="btn bg-[#1c0a35] text-[#e9d8a6] w-40 rounded-md h-10 font-semibold">
               Show All
             </button>
           </NavLink>

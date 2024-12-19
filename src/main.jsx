@@ -24,8 +24,12 @@ import AllUser from "./Components/pages/Admin/AllUser.jsx";
 import UpdatingFund from "./Components/pages/UpdatingCauses/UpdatingFund.jsx";
 import ErrorPage from "./Components/pages/ErrorHandling/ErrorPage.jsx";
 import AllTransactions from "./Components/pages/Admin/AllTransactions.jsx";
-
 import UserTransactions from "./Components/pages/userTransaction/UserTransactions.jsx";
+import PrivateRoute from "./Components/pages/privateRoute/PrivateRoute.jsx";
+import AdminProfile from "./Components/pages/Admin/AdminProfile.jsx";
+import UserProfile from "./Components/pages/userTransaction/UserProfile.jsx";
+import EditUserInfo from "./Components/pages/userTransaction/EditUserInfo.jsx";
+import EditAdminProfile from "./Components/pages/Admin/EditAdminProfile.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -34,14 +38,27 @@ createRoot(document.getElementById("root")).render(
         <Toaster />
       </div>
       <Routes>
-        <Route path="/" element={<MainLayout />} errorElement={ErrorPage}>
+        <Route path="/" element={<MainLayout />} errorElement={<ErrorPage />}>
           <Route path="/" element={<Home />} />
           <Route path="/donations" element={<DonationsPage />} />
-          <Route path="/donations/:id" element={<SingleDonationPage />}></Route>
+          <Route
+            path="/donations/:id"
+            element={
+              <PrivateRoute
+                element={<SingleDonationPage />}
+                allowedRole={["user"]}
+              />
+            }
+          ></Route>
           <Route path="/fundraisings" element={<FundRaising />} />
           <Route
             path="/fundraisings/:id"
-            element={<SingleFundraisingPage />}
+            element={
+              <PrivateRoute
+                element={<SingleFundraisingPage />}
+                allowedRole={["user"]}
+              />
+            }
           ></Route>
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/contactus" element={<ContactUs />} />
@@ -49,26 +66,106 @@ createRoot(document.getElementById("root")).render(
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/admin" element={<AdminLayout></AdminLayout>}>
-          <Route path="/admin/admin-home" element={<AdminHome />} />
-          <Route path="/admin/create-donation" element={<CreateDonations />} />
-          <Route path="/admin/all-donation" element={<AllDonations />} />
+          <Route
+            path="/admin/admin-home"
+            element={
+              <PrivateRoute element={<AdminHome />} allowedRole={["admin"]} />
+            }
+          />
+          <Route
+            path="/admin/create-donation"
+            element={
+              <PrivateRoute
+                element={<CreateDonations />}
+                allowedRole={["admin"]}
+              />
+            }
+          />
+          <Route
+            path="/admin/all-donation"
+            element={
+              <PrivateRoute
+                element={<AllDonations />}
+                allowedRole={["admin"]}
+              />
+            }
+          />
           <Route
             path="/admin/create-fundraiser"
-            element={<CreateFundraising />}
+            element={
+              <PrivateRoute
+                element={<CreateFundraising />}
+                allowedRole={["admin"]}
+              />
+            }
           />
-          <Route path="/admin/all-fundraiser" element={<AllFundraising />} />
-          <Route path="/admin/all-user" element={<AllUser />} />
-          <Route path="/admin/update-fund/:id" element={<UpdatingFund />} />
+          <Route
+            path="/admin/all-fundraiser"
+            element={
+              <PrivateRoute
+                element={<AllFundraising />}
+                allowedRole={["admin"]}
+              />
+            }
+          />
+          <Route
+            path="/admin/all-user"
+            element={<PrivateRoute element={<AllUser />} />}
+            allowedRole={["admin"]}
+          />
+          <Route
+            path="/admin/update-fund/:id"
+            element={<PrivateRoute element={<UpdatingFund />} />}
+            allowedRole={["admin"]}
+          />
           <Route
             path="/admin/update-donation/:id"
-            element={<UpdatingDonations />}
+            element={
+              <PrivateRoute
+                element={<PrivateRoute element={<UpdatingDonations />} />}
+                allowedRole={["admin"]}
+              />
+            }
           />
-          <Route path="/admin/all-donations" element={<AllTransactions />} />
+          <Route
+            path="/admin/all-donations"
+            element={
+              <PrivateRoute
+                element={<AllTransactions />}
+                allowedRole={["admin"]}
+              />
+            }
+          />
+          <Route
+            path="/admin/profile"
+            element={<PrivateRoute element={<AdminProfile />} />}
+            allowedRole={["admin"]}
+          />
+          <Route
+            path="/admin/update-admin/:id"
+            element={<PrivateRoute element={<EditAdminProfile />} />}
+            allowedRole={["admin"]}
+          />
         </Route>
         <Route
           path="/user/user-transactions"
-          element={<UserTransactions />}
+          element={
+            <PrivateRoute
+              element={<UserTransactions />}
+              allowedRole={["user"]}
+            />
+          }
         ></Route>
+        <Route
+          path="/user/profile"
+          element={<PrivateRoute element={<UserProfile />} />}
+          allowedRole={["user"]}
+        />
+        <Route
+          path="/user/update-user/:id"
+          element={<PrivateRoute element={<EditUserInfo />} />}
+          allowedRole={["user"]}
+        />
       </Routes>
     </BrowserRouter>
   </StrictMode>

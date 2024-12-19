@@ -1,26 +1,38 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../../assets/logo.png";
 import Cookies from "js-cookie";
 import userAuth from "../../utils/AuthProvider/AuthProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const { user, setUser } = userAuth();
-  const [dropdownOpen, setDropdownOpen] = useState();
   const handleLogOut = () => {
     Cookies.remove("accessToken");
     setUser(null);
+    navigate("/");
   };
   console.log("this is the user", user);
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
 
   return (
     <div>
-      <div className="navbar bg-[#fae3a5]">
+      <div className="navbar bg-[#03045e]">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost lg:hidden bg-[#e9d8a6]"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -58,10 +70,10 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <div className="flex">
+            <div className="flex" data-aos="flip-left" data-aos-once="false">
               {" "}
               <img src={logo} alt="" className="w-28 ml-4" />
-              <a className="btn btn-ghost text-3xl font-bold text-[#2e3549] mt-8">
+              <a className="btn btn-ghost text-3xl font-bold text-[#e9d8a6] mt-8">
                 GiveHub
               </a>
             </div>
@@ -75,7 +87,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "text-[#9c4b36] text-lg font-bold  rounded-md"
-                    : "text-[#2e3549] text-lg font-bold"
+                    : "text-[#e9d8a6] text-lg font-bold"
                 }
               >
                 Home
@@ -87,7 +99,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "text-[#9c4b36] text-lg font-bold  rounded-md"
-                    : "text-[#2e3549] text-lg font-bold"
+                    : "text-[#e9d8a6] text-lg font-bold"
                 }
               >
                 Donation
@@ -100,7 +112,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "text-[#9c4b36] text-lg font-bold  rounded-md"
-                    : "text-[#2e3549] text-lg font-bold"
+                    : "text-[#e9d8a6] text-lg font-bold"
                 }
               >
                 FundRaising
@@ -112,7 +124,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "text-[#9c4b36] text-lg font-bold  rounded-md"
-                    : "text-[#2e3549] text-lg font-bold"
+                    : "text-[#e9d8a6] text-lg font-bold"
                 }
               >
                 About Us
@@ -124,7 +136,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "text-[#9c4b36] text-lg font-bold  rounded-md"
-                    : "text-[#2e3549] text-lg font-bold"
+                    : "text-[#e9d8a6] text-lg font-bold"
                 }
               >
                 Contact Us
@@ -157,14 +169,14 @@ const Navbar = () => {
                         <Link to="/admin/admin-home"> Dash Board </Link>
                       </li>
                       <li>
-                        <Link to="/admin/admin-profile">Admin Profile</Link>
+                        <Link to="/admin/profile">Admin Profile</Link>
                       </li>
                     </ul>
                   ) : (
                     <ul>
                       <li>{user.userName}</li>
                       <li>
-                        <Link to="">User Profile</Link>
+                        <Link to="/user/profile">User Profile</Link>
                       </li>
                       <li>
                         <Link to="/user/user-transactions">
@@ -188,7 +200,7 @@ const Navbar = () => {
         ) : (
           <div className="navbar-end">
             <Link to="/signin">
-              <button className="btn mr-10 bg-[#2e3549] text-white">
+              <button className="btn mr-10 bg-[#1c0a35] text-[#e9d8a6]">
                 Join us{" "}
                 <FontAwesomeIcon icon={faHeart} className="text-red-800" />
               </button>

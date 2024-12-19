@@ -56,8 +56,8 @@ const DonationsPage = () => {
                   <div className="card-actions justify-center">
                     <Link to={`/donations/${donation._id}`}>
                       {" "}
-                      <button className="btn bg-[#2e3549] w-20 rounded-md h-10 font-semibold text-white">
-                        Donate
+                      <button className="btn bg-[#1c0a35] text-[#e9d8a6] w-[250px] rounded-md h-10 font-semibold ">
+                        Show Details
                       </button>
                     </Link>
                   </div>

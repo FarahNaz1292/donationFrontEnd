@@ -11,18 +11,17 @@ const AllTransactions = () => {
         const response = await axios.get(
           "http://localhost:5000/api/all-transactions"
         );
-        console.log(response);
         setAllTransactions(response.data.data);
+
         setLoading(false);
-        setRefreshKey((prev) => prev + 1);
       };
       fetchAllTransactions();
     } catch (error) {
       setLoading(false);
     }
   }, [refreshKey]);
+  console.log(allTransactions);
 
-  // console.log();
   if (loading) {
     return (
       <div className="min-h-screen max-w[100vh] flex justify-center items-center">

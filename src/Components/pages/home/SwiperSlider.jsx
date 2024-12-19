@@ -36,9 +36,9 @@ const SwiperSlider = () => {
               className="w-full object-cover "
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#dda05f] opacity-35"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#2e3549]">
-            <p className="text-3xl font-bold text-center text-[#2e3549]">
+          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
+            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
             <p className="font-bold text-center text-2xl ">Feed the hungry</p>
@@ -59,9 +59,9 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#dda05f] opacity-35"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#2e3549]">
-            <p className="text-3xl font-bold text-center text-[#2e3549]">
+          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
+            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
             <p className="font-bold text-center text-2xl ">
@@ -85,9 +85,9 @@ const SwiperSlider = () => {
             />
           </div>
 
-          <div className="w-full h-full absolute left-0 top-0 bg-[#dda05f] opacity-35"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#2e3549]">
-            <p className="text-3xl font-bold text-center text-[#2e3549]">
+          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
+            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
             <p className="font-bold text-center text-2xl ">
@@ -110,9 +110,9 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#dda05f] opacity-40"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#2e3549]">
-            <p className="text-3xl font-bold text-center text-[#2e3549]">
+          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-40"></div>
+          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
+            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
             <p className="font-bold text-center text-2xl ">
@@ -135,9 +135,9 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#dda05f] opacity-40"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#2e3549]">
-            <p className="text-3xl font-bold text-center text-[#2e3549]">
+          <div className="w-full h-full absolute left-0 top-0  bg-[#023e8a] opacity-40"></div>
+          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
+            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
             <p className="font-bold text-center text-2xl ">
@@ -160,9 +160,9 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#dda05f] opacity-40"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#2e3549]">
-            <p className="text-3xl font-bold text-center text-[#2e3549]">
+          <div className="w-full h-full absolute left-0 top-0  bg-[#023e8a] opacity-40"></div>
+          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
+            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
             <p className="font-bold text-center text-2xl ">
@@ -185,9 +185,9 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#dda05f] opacity-40"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#2e3549]">
-            <p className="text-3xl font-bold text-center text-[#2e3549]">
+          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-40"></div>
+          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
+            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
             <p className="font-bold text-center text-2xl ">
@@ -210,9 +210,9 @@ const SwiperSlider = () => {
               className="  w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#dda05f] opacity-40"></div>
-          <div className="absolute top-1/2 left-[30%] left[20%] text-[#2e3549]">
-            <p className="text-3xl font-bold text-center text-[#2e3549]">
+          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-40"></div>
+          <div className="absolute top-1/2 left-[30%] left[20%] text-[#e9d8a6]">
+            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
             <p className="font-bold  text-2xl text-center ">

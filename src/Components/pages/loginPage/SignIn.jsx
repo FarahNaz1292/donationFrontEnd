@@ -29,7 +29,7 @@ const SignIn = () => {
 
   return (
     <>
-      <div className="hero bg-[#fae3a5] min-h-screen">
+      <div className="hero bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ... min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className=" w-[50%]">
             <Lottie
@@ -39,11 +39,11 @@ const SignIn = () => {
               height={500}
             />
           </div>
-          <div className="card bg-amber-200 w-[50%]  shrink-0 shadow-2xl">
+          <div className="card bg-[#caf0f8] w-[50%]  shrink-0 shadow-2xl">
             <form className="card-body" onSubmit={handleSubmit}>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text font-bold">Email</span>
                 </label>
                 <input
                   name="email"
@@ -55,7 +55,7 @@ const SignIn = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text font-bold">Password</span>
                 </label>
                 <input
                   type="password"
@@ -65,20 +65,26 @@ const SignIn = () => {
                   required
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
+                  <a
+                    href="#"
+                    className="label-text-alt link link-hover font-semibold"
+                  >
                     Forgot password?
                   </a>
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-amber-300 shadow-black" type="submit">
+                <button
+                  className="btn bg-[#1c0a35] text-[#e9d8a6]   shadow-black"
+                  type="submit"
+                >
                   Login
                 </button>
               </div>
-              <p className="text-center">
+              <p className="text-center font-bold">
                 Dont have an account. Please{" "}
                 <Link to="/signup">
-                  <span className="underline">SignUp</span>
+                  <span className="underline text-blue-600">SignUp</span>
                 </Link>
               </p>
             </form>

@@ -4,20 +4,22 @@ import { jwtDecode } from "jwt-decode";
 
 const userAuth = () => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getUserFromToken = () => {
       try {
         const token = Cookies.get("accessToken");
-        console.log(token);
+        // console.log(token);
 
         if (token) {
           const decoded = jwtDecode(token);
-          console.log("this is the decoded", decoded);
 
           setUser(decoded);
+          setLoading(false);
         } else {
           setUser(null);
+          setLoading(false);
         }
       } catch (error) {
         console.error("Error decoding token:", error);
@@ -27,7 +29,7 @@ const userAuth = () => {
     getUserFromToken();
   }, []);
 
-  return { user, setUser };
+  return { user, setUser, loading };
 };
 
 export default userAuth;
