@@ -25,7 +25,7 @@ const SwiperSlider = () => {
         }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper items-center h-[80vh]"
+        className="mySwiper items-center lg:h-[80vh]"
       >
         <SwiperSlide>
           <div className="relative">
@@ -36,12 +36,14 @@ const SwiperSlider = () => {
               className="w-full object-cover "
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-35"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
-            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
+          <div className="lg:w-full lg:h-full absolute lg:left-0 lg:top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute lg:top-1/2 lg:left-1/3 top-12 left-8 text-[#e9d8a6]">
+            <p className="lg:text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
-            <p className="font-bold text-center text-2xl ">Feed the hungry</p>
+            <p className="font-bold text-center lg:text-2xl ">
+              Feed the hungry
+            </p>
             <div className="flex items-center justify-center">
               <Link to="/signin">
                 <button className="btn btn-active btn-ghost">
@@ -59,13 +61,13 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-35"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
-            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
+          <div className="lg:w-full lg:h-full absolute lg:left-0 lg:top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute lg:top-1/2 lg:left-1/3 top-12 left-8 text-[#e9d8a6]">
+            <p className="lg:text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
-            <p className="font-bold text-center text-2xl ">
-              Help us Stop Child Labour
+            <p className="font-bold text-center lg:text-2xl ">
+              Feed the hungry
             </p>
             <div className="flex items-center justify-center">
               <Link to="/signin">
@@ -85,13 +87,13 @@ const SwiperSlider = () => {
             />
           </div>
 
-          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-35"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
-            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
+          <div className="lg:w-full lg:h-full absolute lg:left-0 lg:top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute lg:top-1/2 lg:left-1/3 top-12 left-8 text-[#e9d8a6]">
+            <p className="lg:text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
-            <p className="font-bold text-center text-2xl ">
-              Help us plan more trees
+            <p className="font-bold text-center lg:text-2xl ">
+              Feed the hungry
             </p>
             <div className="flex items-center justify-center">
               <Link to="/signin">
@@ -110,13 +112,13 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-40"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
-            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
+          <div className="lg:w-full lg:h-full absolute lg:left-0 lg:top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute lg:top-1/2 lg:left-1/3 top-12 left-8 text-[#e9d8a6]">
+            <p className="lg:text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
-            <p className="font-bold text-center text-2xl ">
-              Help us finance farmers
+            <p className="font-bold text-center lg:text-2xl ">
+              Feed the hungry
             </p>
             <div className="flex items-center justify-center">
               <Link to="/signin">
@@ -135,13 +137,13 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0  bg-[#023e8a] opacity-40"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
-            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
+          <div className="lg:w-full lg:h-full absolute lg:left-0 lg:top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute lg:top-1/2 lg:left-1/3 top-12 left-8 text-[#e9d8a6]">
+            <p className="lg:text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
-            <p className="font-bold text-center text-2xl ">
-              Help us provide clean water
+            <p className="font-bold text-center lg:text-2xl ">
+              Feed the hungry
             </p>
             <div className="flex items-center justify-center">
               <Link to="/signin">
@@ -160,13 +162,13 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0  bg-[#023e8a] opacity-40"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
-            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
+          <div className="lg:w-full lg:h-full absolute lg:left-0 lg:top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute lg:top-1/2 lg:left-1/3 top-12 left-8 text-[#e9d8a6]">
+            <p className="lg:text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
-            <p className="font-bold text-center text-2xl ">
-              Help us provide mobile medical
+            <p className="font-bold text-center lg:text-2xl ">
+              Feed the hungry
             </p>
             <div className="flex items-center justify-center">
               <Link to="/signin">
@@ -185,13 +187,13 @@ const SwiperSlider = () => {
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-40"></div>
-          <div className="absolute top-1/2 left-1/3 text-[#e9d8a6]">
-            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
+          <div className="lg:w-full lg:h-full absolute lg:left-0 lg:top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute lg:top-1/2 lg:left-1/3 top-12 left-8 text-[#e9d8a6]">
+            <p className="lg:text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
-            <p className="font-bold text-center text-2xl ">
-              Help us make education afforadable
+            <p className="font-bold text-center lg:text-2xl ">
+              Feed the hungry
             </p>
             <div className="flex items-center justify-center">
               <Link to="/signin">
@@ -210,13 +212,13 @@ const SwiperSlider = () => {
               className="  w-full object-cover"
             />
           </div>
-          <div className="w-full h-full absolute left-0 top-0 bg-[#023e8a] opacity-40"></div>
-          <div className="absolute top-1/2 left-[30%] left[20%] text-[#e9d8a6]">
-            <p className="text-3xl font-bold text-center text-[#e9d8a6]">
+          <div className="lg:w-full lg:h-full absolute lg:left-0 lg:top-0 bg-[#023e8a] opacity-35"></div>
+          <div className="absolute lg:top-1/2 lg:left-1/3 top-12 left-8 text-[#e9d8a6]">
+            <p className="lg:text-3xl font-bold text-center text-[#e9d8a6]">
               "Your Generosity Can Change Lives"
             </p>
-            <p className="font-bold  text-2xl text-center ">
-              help us stop animal abuse
+            <p className="font-bold text-center lg:text-2xl ">
+              Feed the hungry
             </p>
             <div className="flex items-center justify-center">
               <Link to="/signin">

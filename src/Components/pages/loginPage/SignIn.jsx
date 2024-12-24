@@ -39,7 +39,7 @@ const SignIn = () => {
               height={500}
             />
           </div>
-          <div className="card bg-[#caf0f8] w-[50%]  shrink-0 shadow-2xl">
+          <div className="card bg-[#caf0f8] lg:w-[50%]  shrink-0 shadow-2xl">
             <form className="card-body" onSubmit={handleSubmit}>
               <div className="form-control">
                 <label className="label">

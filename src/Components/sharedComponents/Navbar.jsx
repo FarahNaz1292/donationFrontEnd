@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar bg-[#03045e]">
+      <div className="navbar bg-[#03045e] ">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -72,8 +72,8 @@ const Navbar = () => {
           <Link to="/">
             <div className="flex" data-aos="flip-left" data-aos-once="false">
               {" "}
-              <img src={logo} alt="" className="w-28 ml-4" />
-              <a className="btn btn-ghost text-3xl font-bold text-[#e9d8a6] mt-8">
+              <img src={logo} alt="" className="lg:w-28 w-14 lg:ml-4 ml-2" />
+              <a className="btn btn-ghost text-3xl font-bold text-[#e9d8a6] lg:mt-8">
                 GiveHub
               </a>
             </div>
@@ -150,7 +150,7 @@ const Navbar = () => {
               <button>
                 {" "}
                 <div className="avatar">
-                  <div className="w-16 rounded-full mr-7">
+                  <div className="lg:w-16  w-8 rounded-full lg:mr-7 mr-2">
                     <img src={user.profilePicture} alt={user.userName} />
                   </div>
                 </div>

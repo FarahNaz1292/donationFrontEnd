@@ -28,7 +28,7 @@ const RaiseFundSection = () => {
           <h1 className="text-2xl font-bold text">
             Ongoing Fundraising campaigns
           </h1>
-          <p className="text-xl font-semibold">
+          <p className="text-xl lg:font-semibold text-center">
             Please be generous and view all our ongoing campaigns and donate to
             help us make this world a better place to live for all
           </p>

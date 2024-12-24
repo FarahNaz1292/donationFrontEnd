@@ -26,7 +26,7 @@ const AdvertiseSection = () => {
         data-aos-once="false"
       >
         <div>
-          <span className="absolute ml-4 mt-2 top-1/3">
+          <span className="absolute lg:ml-5 lg:mt-2 lg:top-1/3  ml-6 mt-6">
             <FontAwesomeIcon
               icon={faCreditCard}
               className="font-bold text-xl text-[#e9d8a6]"
@@ -37,15 +37,18 @@ const AdvertiseSection = () => {
           </h1>
         </div>
         <div>
-          <span className="absolute ml-5 mt-2 top-1/3">
-            <FontAwesomeIcon icon={faClock} className="font-bold text-xl" />
+          <span className="absolute lg:ml-5 lg:mt-2 lg:top-1/3  ml-6 mt-6">
+            <FontAwesomeIcon
+              icon={faClock}
+              className="font-bold text-xl text-[#e9d8a6] "
+            />
           </span>
-          <h1 className=" bg-[#441a7e] text-center text-[#e9d8a6] font-bold w-[250px] h-20 py-6 rounded-md">
+          <h1 className=" bg-[#441a7e] text-center text-[#e9d8a6]  font-bold w-[250px] h-20 py-6 rounded-md">
             Real-time Updates
           </h1>
         </div>
         <div>
-          <span className="absolute ml-7 mt-2 top-1/3">
+          <span className="absolute lg:ml-5 lg:mt-2 lg:top-1/3  ml-6 mt-6">
             <FontAwesomeIcon
               icon={faMagnifyingGlass}
               className="font-bold text-xl text-[#e9d8a6]"
@@ -56,7 +59,7 @@ const AdvertiseSection = () => {
           </h1>
         </div>{" "}
         <div>
-          <span className="absolute ml-5 mt-2 top-1/3">
+          <span className="absolute lg:ml-5 lg:mt-2 lg:top-1/3  ml-6 mt-6">
             <FontAwesomeIcon
               icon={faBookOpenReader}
               className="font-bold text-xl text-[#e9d8a6]"
@@ -67,7 +70,7 @@ const AdvertiseSection = () => {
           </h1>
         </div>
         <div>
-          <span className="absolute ml-5 mt-2 top-1/3">
+          <span className="absolute lg:ml-5 lg:mt-2 lg:top-1/3  ml-6 mt-6">
             <FontAwesomeIcon
               icon={faHandshake}
               className="font-bold text-xl text-[#e9d8a6]"
