@@ -202,7 +202,7 @@ const Navbar = () => {
         ) : (
           <div className="navbar-end">
             <Link to="/signin">
-              <button className="btn mr-10 bg-[#1c0a35] text-[#e9d8a6]">
+              <button className="btn lg:mr-10 bg-[#1c0a35] text-[#e9d8a6]">
                 Join us{" "}
                 <FontAwesomeIcon icon={faHeart} className="text-red-800" />
               </button>

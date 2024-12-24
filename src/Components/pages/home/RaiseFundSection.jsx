@@ -41,7 +41,7 @@ const RaiseFundSection = () => {
             return (
               <div
                 key={fund.id}
-                className="card card-compact bg-base-100  shadow-xl"
+                className="card card-compact bg-base-100  shadow-xl m-2"
               >
                 <figure>
                   <img

@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router";
 import userAuth from "../../../utils/AuthProvider/AuthProvider";
 import Navbar from "../../sharedComponents/Navbar";
 import Footer from "../../sharedComponents/Footer";
-import SwiperSlider from "../home/SwiperSlider";
 
 const UserProfile = () => {
   const { user, loading } = userAuth();
@@ -42,23 +41,25 @@ const UserProfile = () => {
     <>
       <Navbar />
       {userProfile ? (
-        <div className="flex flex-col w-full h-full justify-center items-center m-10 bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ...">
-          <h1 className="text-3xl font-extrabold m-8">Your Profile</h1>
+        <div className="flex flex-col w-full h-full justify-center items-center  lg:m-10 bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec]">
+          <h1 className="lg:text-3xl lg:font-extrabold lg:m-8 ">
+            Your Profile
+          </h1>
           <div>
             <img
               src={userProfile.profilePicture}
               alt={userProfile.userName}
-              className="w-[1200px]"
+              className="lg:w-[1200px] w-[1000px] m-3"
             />
           </div>
           <div className="hero">
             <div className="hero-content flex-col lg:flex-row-reverse">
-              <div className="card w-full shadow-2xl ">
-                <form className="card-body ml-20 mr-20 ">
-                  <div className="form-control flex flex-row gap-20">
+              <div className="card lg:w-full shadow-2xl ">
+                <form className="card-body lg:ml-20 mr-10 lg:mr-20 lg:w-full">
+                  <div className="form-control flex flex-row lg:gap-20 ">
                     <label className="label">
-                      <span className="label-text text-2xl font-bold">
-                        userName
+                      <span className="label-text lg:text-2xl text-lg font-bold">
+                        Name
                       </span>
                     </label>
                     <input
@@ -67,9 +68,9 @@ const UserProfile = () => {
                       className="input input-bordered text-center text-2xl text-zinc-950"
                     />
                   </div>
-                  <div className="form-control flex flex-row gap-32">
+                  <div className="form-control flex flex-row lg:gap-32">
                     <label className="label">
-                      <span className="label-text text-2xl font-bold">
+                      <span className="label-text lg:text-2xl text-lg font-bold">
                         Email
                       </span>
                     </label>
@@ -79,9 +80,9 @@ const UserProfile = () => {
                       className="input input-bordered text-center text-2xl text-zinc-950"
                     />
                   </div>
-                  <div className="form-control flex flex-row gap-36 ">
+                  <div className="form-control flex flex-row lg:gap-36 ">
                     <label className="label">
-                      <span className="label-text text-2xl font-bold">
+                      <span className="label-text lg:text-2xl text-lg font-bold">
                         Role
                       </span>
                     </label>

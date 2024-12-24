@@ -47,7 +47,7 @@ const UserTransactions = () => {
           <h1 className="text-4xl text-center font-bold p-8">
             User Transaction
           </h1>
-          <div className=" w-[80%] h-[100%] m-10 border-8 ">
+          <div className=" lg:w-[80%] lg:h-[100%] lg:m-10 border-8 ">
             <table className="table flex justify-center items-center">
               {/* Table Header */}
               <thead>

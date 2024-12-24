@@ -40,9 +40,9 @@ const DonationsPage = () => {
         className="flex  justify-center items-center realtive mb-32"
         data-aos="fade-zoom-in"
       >
-        <div className="flex items-center justify-center w-full h-20 bg-gradient-to-r  from-[#7ebff7] to-[#4438ec] ... absolute top-1 gap-7 outline-double outline-blue-950 ">
+        <div className="flex items-center justify-center w-full h-20 bg-gradient-to-r  from-[#7ebff7] to-[#4438ec] absolute top-1 gap-7 outline-double outline-blue-950 ">
           <div>
-            <label className="input input-lg w-full max-w-xs flex items-center gap-2">
+            <label className="input input-lg lg:w-full w-60 ml-2 max-w-xs flex items-center gap-2">
               <input
                 ref={searchRef}
                 type="text"
@@ -54,7 +54,7 @@ const DonationsPage = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                   fill="currentColor"
-                  className="h-4 w-4 opacity-70"
+                  className="lg:h-4  lg:w-4 opacity-70"
                 >
                   <path
                     fillRule="evenodd"
@@ -66,7 +66,6 @@ const DonationsPage = () => {
             </label>
           </div>
           <div>
-            {" "}
             <select
               className="select select-bordered w-full max-w-xs bg-[#1c0a35] text-[#e9d8a6]"
               ref={changeRef}
@@ -97,14 +96,14 @@ const DonationsPage = () => {
       </div>
       <div>
         <div
-          className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10 mb-10"
+          className="grid lg:grid-cols-4  md:grid-cols-2 grid-col-1 gap-6 max-w-7xl mx-auto mt-10 mb-10"
           data-aos="fade-up"
         >
           {donations.map((donation) => {
             return (
               <div
                 key={donation.id}
-                className="card card-compact bg-base-100  shadow-xl"
+                className="card card-compact bg-base-100  shadow-xl m-2"
               >
                 <figure>
                   <img

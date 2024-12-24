@@ -96,14 +96,14 @@ const FundRaising = () => {
           </p>
         </div>
         <div
-          className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 max-w-7xl mx-auto mt-10 mb-10"
+          className="grid lg:grid-cols-4  md:grid-cols-2 grid-col-1 gap-6 max-w-7xl mx-auto mt-10 mb-10"
           data-aos="fade-down"
         >
           {fundRaisings.map((fund) => {
             return (
               <div
                 key={fund._id}
-                className="card card-compact bg-base-100  shadow-xl"
+                className="card card-compact bg-base-100  shadow-xl m-2"
               >
                 <figure>
                   <img

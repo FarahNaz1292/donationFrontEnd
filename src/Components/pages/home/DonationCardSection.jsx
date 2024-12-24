@@ -37,7 +37,7 @@ const DonationCardSection = () => {
       </div>
       <div>
         <div
-          className="grid lg:grid-cols-4 md:grid-cols-2   grid-col-1   gap-6 max-w-7xl mx-auto mt-10"
+          className="grid lg:grid-cols-4 md:grid-cols-2   grid-col-1   gap-6 max-w-7xl mx-auto mt-10 "
           data-aos="zoom-in-down"
           data-aos-once="true"
         >
@@ -45,7 +45,7 @@ const DonationCardSection = () => {
             return (
               <div
                 key={donation.id}
-                className="card card-compact bg-base-100  shadow-xl"
+                className="card card-compact bg-base-100  shadow-xl m-2"
               >
                 <figure>
                   <img
