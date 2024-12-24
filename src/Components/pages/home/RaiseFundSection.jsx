@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 
 const RaiseFundSection = () => {
   const [fundRaisings, setFundRaisings] = useState([]);
+
   const [cards, setCards] = useState(4);
   useEffect(() => {
     AOS.init({
@@ -33,7 +34,7 @@ const RaiseFundSection = () => {
           </p>
         </div>
         <div
-          className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10"
+          className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 max-w-7xl mx-auto mt-10"
           data-aos="zoom-out-up"
         >
           {fundRaisings.slice(0, cards).map((fund) => {

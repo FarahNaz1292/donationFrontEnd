@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import userAuth from "../../../utils/AuthProvider/AuthProvider";
 import SwiperSlider from "../home/SwiperSlider";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SingleDonationPage = () => {
   const { user } = userAuth();
@@ -11,6 +13,10 @@ const SingleDonationPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [donationID, setDonationId] = useState("");
   useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      easing: "linear",
+    });
     const fetchDonation = async () => {
       const response = await axios.get(
         `http://localhost:5000/api/donations/${id}`
@@ -61,6 +67,7 @@ const SingleDonationPage = () => {
                   src={donations.thumbnail}
                   alt=""
                   className="w-[800px] h-[400px]"
+                  data-aos="flip-right"
                 />
               </div>
               <div>
@@ -97,6 +104,7 @@ const SingleDonationPage = () => {
                   <dialog
                     id="my_modal_5"
                     className="modal modal-middle sm:modal-middle"
+                    data-aos="fade-in"
                     open
                   >
                     <div className="modal-box ">

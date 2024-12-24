@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-
 import SwiperSlider from "../home/SwiperSlider";
 import userAuth from "../../../utils/AuthProvider/AuthProvider";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SingleFundraisingPage = () => {
   const { user } = userAuth();
@@ -13,6 +14,10 @@ const SingleFundraisingPage = () => {
   const [fundraiserID, setFundraiserId] = useState("");
 
   useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      easing: "linear",
+    });
     const fetchFundraising = async () => {
       const response = await axios.get(
         `http://localhost:5000/api/single-fund/${id}`
@@ -61,7 +66,7 @@ const SingleFundraisingPage = () => {
         {fundraising ? (
           <div className="flex max-w-7xl mx-auto m-10 justify-center items-center gap-10">
             <div className="flex items-center justify-center gap-20">
-              <div>
+              <div data-aos="flip-left">
                 <img
                   src={fundraising.thumbnail}
                   alt=""
@@ -109,6 +114,7 @@ const SingleFundraisingPage = () => {
                   <dialog
                     id="my_modal_5"
                     className="modal modal-middle sm:modal-middle"
+                    data-aos="fade-in"
                     open
                   >
                     <div className="modal-box ">

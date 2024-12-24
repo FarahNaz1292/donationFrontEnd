@@ -46,7 +46,7 @@ createRoot(document.getElementById("root")).render(
             element={
               <PrivateRoute
                 element={<SingleDonationPage />}
-                allowedRole={["user"]}
+                allowedRole={["user", "admin"]}
               />
             }
           ></Route>
@@ -56,7 +56,7 @@ createRoot(document.getElementById("root")).render(
             element={
               <PrivateRoute
                 element={<SingleFundraisingPage />}
-                allowedRole={["user"]}
+                allowedRole={["user", "admin"]}
               />
             }
           ></Route>

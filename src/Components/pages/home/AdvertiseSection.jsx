@@ -21,7 +21,7 @@ const AdvertiseSection = () => {
   return (
     <>
       <div
-        className="flex gap-7 justify-center items-center p-7 m-8 relative"
+        className="flex gap-7 justify-center items-center p-7 m-8 relative lg:flex-row flex-col"
         data-aos="flip-up"
         data-aos-once="false"
       >

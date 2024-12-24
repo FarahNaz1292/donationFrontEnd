@@ -1,16 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import Navbar from "../../sharedComponents/Navbar";
-import Footer from "../../sharedComponents/Footer";
+
 import axios from "axios";
 
 const EditAdminProfile = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [editProfile, setEditProfile] = useState(null);
-  const [fileName, setFileName] = useState();
-  const [image, setImage] = useState(null);
-  const loadFile = useRef(null);
   useEffect(() => {
     const getUserProfile = async () => {
       const response = await axios.get(
@@ -31,13 +27,13 @@ const EditAdminProfile = () => {
       </div>
     );
   }
-  const { userName, email, role } = editProfile;
+  const { userName, email, profilePicture } = editProfile;
   const handleEditUser = async (e) => {
     e.preventDefault();
     const form = e.target;
     const userName = form.userName.value;
     const email = form.email.value;
-    const profilePicture = form.profilePicture.files[0];
+    const profilePicture = form.profilePicture.value;
 
     const editedProfile = {
       userName,
@@ -110,17 +106,9 @@ const EditAdminProfile = () => {
                   <span className="label-text">Profile Picture</span>
                 </label>
                 <input
-                  onClick={() => loadFile.current.click()}
-                  required
-                  name="profilePicture"
-                  type="file"
-                  ref={loadFile}
-                  onChange={({ target: { files } }) => {
-                    files[0] && setFileName(files[0].name);
-                    if (files) {
-                      setImage(URL.createObjectURL(files[0]));
-                    }
-                  }}
+                  type="text"
+                  placeholder={editProfile.profilePicture}
+                  className="input input-bordered"
                 />
               </div>
 

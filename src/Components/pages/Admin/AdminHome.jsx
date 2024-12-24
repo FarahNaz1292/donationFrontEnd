@@ -5,7 +5,7 @@ import welcomeAdmin from "../../../../public/welcomeAdmin.json";
 
 const AdminHome = () => {
   return (
-    <div className="bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec] ... w-full h-full">
+    <div className="bg-gradient-to-r from-[#fefae0] via-[#7ebff7] to-[#8338ec]  w-full h-full flex flex-col items-center justify-center">
       <div className="mb-10 flex justify-center items-center  ">
         <TypeAnimation
           sequence={[
@@ -29,12 +29,14 @@ const AdminHome = () => {
           repeat={Infinity}
         />
       </div>
-      <Lottie
-        animationData={welcomeAdmin}
-        autoPlay={true}
-        width={500}
-        height={250}
-      ></Lottie>
+      <div className="w-[500px] h-[450px] ">
+        <Lottie
+          animationData={welcomeAdmin}
+          autoPlay={true}
+          width={500}
+          height={250}
+        ></Lottie>
+      </div>
     </div>
   );
 };

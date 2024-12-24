@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-[#03045e] text-base-content p-4 flex justify-center items-center gap-52 ">
+    <footer className="footer bg-[#03045e] text-base-content p-4 flex justify-center items-center lg:flex-row md:flex-col flex-col lg:gap-52 gap-10">
       <aside>
         <img src={logo} alt="" className="w-20 " />
         <p className="font-bold text-lg  text-[#e9d8a6]"> GiveHub </p>

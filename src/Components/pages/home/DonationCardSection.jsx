@@ -37,7 +37,7 @@ const DonationCardSection = () => {
       </div>
       <div>
         <div
-          className="grid grid-cols-4 gap-6 max-w-7xl mx-auto mt-10"
+          className="grid lg:grid-cols-4 md:grid-cols-2   grid-col-1   gap-6 max-w-7xl mx-auto mt-10"
           data-aos="zoom-in-down"
           data-aos-once="true"
         >
