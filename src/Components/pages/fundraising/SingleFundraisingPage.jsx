@@ -12,6 +12,7 @@ const SingleFundraisingPage = () => {
   const { id } = useParams();
   const [showModal, setShowModal] = useState(false);
   const [fundraiserID, setFundraiserId] = useState("");
+  const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
     AOS.init({
@@ -25,7 +26,7 @@ const SingleFundraisingPage = () => {
       setfundraising(response.data.data);
     };
     fetchFundraising();
-  }, [id]);
+  }, [id, refreshKey]);
   console.log(fundraising);
   const handleShowModal = (fundraising) => {
     setShowModal(true);
@@ -35,7 +36,7 @@ const SingleFundraisingPage = () => {
     e.preventDefault();
     const form = e.target;
     const message = form.message.value;
-    const amount = Number(form.amount.value);
+    const amount = parseFloat(form.amount.value);
     const newFund = {
       donorID: user.id,
       fundRaisingID: fundraising._id,
@@ -53,6 +54,7 @@ const SingleFundraisingPage = () => {
         console.log("Donation Sent");
 
         setShowModal(false);
+        setRefreshKey((prev) => prev + 1);
       }
     } catch (error) {
       console.log(error);
@@ -79,14 +81,18 @@ const SingleFundraisingPage = () => {
                 </h2>
 
                 <p className="text-xl font-bold">{fundraising.category}</p>
-                <p className="text-lg font-semibold">
-                  ${fundraising.targetAmount}
-                </p>
+
                 <progress
                   className="progress progress-success w-56"
                   value={(fundraising.amount / fundraising.targetAmount) * 100}
                   max="100"
                 ></progress>
+                <p className="text-lg font-semibold">
+                  Raised Amount: ${fundraising.amount}
+                </p>
+                <p className="text-lg font-semibold">
+                  Targeted Amount: ${fundraising.targetAmount}
+                </p>
                 <p className="text-nowrap font-semibold">
                   {fundraising.description}
                 </p>
@@ -125,13 +131,20 @@ const SingleFundraisingPage = () => {
                         <h3 className="font-bold text-2xl text-center">
                           Donate
                         </h3>
-                        <div>
-                          {" "}
-                          <h1 className="text-xl font-bold ">
-                            Amount:${fundraising.amount}
-                          </h1>
-                        </div>
+
                         <div className="form-control">
+                          <label className="label">
+                            <span className="label-text text-lg font-semibold">
+                              Amount
+                            </span>
+                          </label>
+                          <input
+                            type="number"
+                            placeholder="Enter Amount"
+                            className="input input-bordered mt-4"
+                            name="amount"
+                            required
+                          />
                           <label className="label">
                             <span className="label-text text-lg font-semibold">
                               Message
@@ -142,13 +155,6 @@ const SingleFundraisingPage = () => {
                             placeholder="Enter Message"
                             className="input input-bordered"
                             name="message"
-                            required
-                          />
-                          <input
-                            type="number"
-                            placeholder="Enter Amount"
-                            className="input input-bordered mt-4"
-                            name="amount"
                             required
                           />
                         </div>
