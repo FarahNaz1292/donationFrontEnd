@@ -16,7 +16,7 @@ const DonationsPage = () => {
     });
     const getDonations = async () => {
       const response = await axios.get(
-        `http://localhost:5000/api/donations?search=${searchValue}&sort=${selectValue}`
+        `https://donation-project-backend.vercel.app/donations?search=${searchValue}&sort=${selectValue}`
       );
       setDonations(response.data.data);
     };

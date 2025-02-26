@@ -19,7 +19,7 @@ const SingleDonationPage = () => {
     });
     const fetchDonation = async () => {
       const response = await axios.get(
-        `http://localhost:5000/api/donations/${id}`
+        `https://donation-project-backend.vercel.app/donations/${id}`
       );
       setDonations(response.data.data);
     };

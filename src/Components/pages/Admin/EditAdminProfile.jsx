@@ -10,7 +10,7 @@ const EditAdminProfile = () => {
   useEffect(() => {
     const getUserProfile = async () => {
       const response = await axios.get(
-        `http://localhost:5000/api/get-user/${id}`
+        `https://donation-project-backend.vercel.app/get-user/${id}`
       );
 
       setEditProfile(response.data.data);

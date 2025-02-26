@@ -13,7 +13,9 @@ const RaiseFundSection = () => {
       duration: 2500,
     });
     const getFundraisings = async () => {
-      const response = await axios.get("http://localhost:5000/api/funds");
+      const response = await axios.get(
+        "https://donation-project-backend.vercel.app/funds"
+      );
       setFundRaisings(response.data.data);
     };
 

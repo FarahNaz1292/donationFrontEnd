@@ -20,7 +20,7 @@ const CreateDonations = () => {
     };
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/create-donations",
+        "https://donation-project-backend.vercel.app/create-donations",
         newDonation
       );
       if (res.data.status === "Success") {

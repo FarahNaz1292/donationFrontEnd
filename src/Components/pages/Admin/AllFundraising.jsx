@@ -26,7 +26,7 @@ const AllFundraising = () => {
   }
   const handleDelete = async (id) => {
     const res = await axios.delete(
-      `http://localhost:5000/api/delete-fund/${id}`
+      `https://donation-project-backend.vercel.app/${id}`
     );
     console.log(res);
     if (res.status === "Success") {

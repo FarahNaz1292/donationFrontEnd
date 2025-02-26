@@ -18,7 +18,7 @@ const UserTransactions = () => {
     const fetchTransaction = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/get-transactions/${user.id}`
+          `https://donation-project-backend.vercel.app/get-transactions/${user.id}`
         );
         console.log(response);
         setTransaction(response.data.data);

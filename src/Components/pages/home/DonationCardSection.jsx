@@ -12,7 +12,9 @@ const DonationCardSection = () => {
       easing: "ease-in-back",
     });
     const getDonations = async () => {
-      const response = await axios.get("http://localhost:5000/api/donations");
+      const response = await axios.get(
+        "https://donation-project-backend.vercel.app/donations"
+      );
       setDonations(response.data.data);
     };
 

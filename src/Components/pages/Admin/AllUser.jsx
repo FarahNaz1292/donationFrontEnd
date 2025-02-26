@@ -15,9 +15,12 @@ const AllUser = () => {
   const handleChange = async (Id, currentrole) => {
     const newRole = currentrole === "user" ? "admin" : "user";
     try {
-      await axios.put(`http://localhost:5000/api/user-update/${Id}`, {
-        role: newRole,
-      });
+      await axios.put(
+        `https://donation-project-backend.vercel.app/user-update/${Id}`,
+        {
+          role: newRole,
+        }
+      );
       setUsers((prevUsers) =>
         prevUsers.map((user) =>
           user._id === Id ? { ...user, role: newRole } : user

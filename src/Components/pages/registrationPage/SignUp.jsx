@@ -22,7 +22,7 @@ const SignUp = () => {
     };
     console.log(newUser);
     await axios
-      .post("http://localhost:5000/api/signup", newUser)
+      .post("https://donation-project-backend.vercel.app/signup", newUser)
 
       .then((res) => {
         console.log(res);

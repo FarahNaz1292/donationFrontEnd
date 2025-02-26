@@ -10,7 +10,7 @@ const UpdatingFund = () => {
   useEffect(() => {
     const getFund = async () => {
       const res = await axios.get(
-        `http://localhost:5000/api/single-fund/${id}`
+        `https://donation-project-backend.vercel.app/single-fund/${id}`
       );
       setFund(res.data.data);
     };

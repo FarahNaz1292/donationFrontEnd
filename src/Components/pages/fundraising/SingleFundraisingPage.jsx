@@ -21,7 +21,7 @@ const SingleFundraisingPage = () => {
     });
     const fetchFundraising = async () => {
       const response = await axios.get(
-        `http://localhost:5000/api/single-fund/${id}`
+        `https://donation-project-backend.vercel.app/single-fund/${id}`
       );
       setfundraising(response.data.data);
     };

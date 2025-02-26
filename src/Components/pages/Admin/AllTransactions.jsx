@@ -9,7 +9,7 @@ const AllTransactions = () => {
     try {
       const fetchAllTransactions = async () => {
         const response = await axios.get(
-          "http://localhost:5000/api/all-transactions"
+          "https://donation-project-backend.vercel.app/all-transactions"
         );
         setAllTransactions(response.data.data);
 
